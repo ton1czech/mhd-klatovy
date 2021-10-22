@@ -2,13 +2,13 @@
 :root {
   --clr-nav: #fef7dc;
   --clr-h1: #756c51;
+  --clr-h2: #57503b;
   --clr-p: #c39831;
   --clr-a: #6e6755;
   --clr-main: #e9d6a5;
   --clr-footer: #fef7dc;
   --clr-line: #ccc2ab;
   --clr-btn: #906d1a;
-  --clr-svg: #6e6755;
 }
 
 .darkmode {
@@ -45,6 +45,11 @@ a {
 h1 {
   color: var(--clr-h1);
   font-size: 6em;
+}
+
+h2 {
+  color: var(--clr-h2);
+  font-size: 2em;
 }
 
 p {
@@ -144,11 +149,39 @@ footer {
   border-top: 0.5px solid var(--clr-line);
 }
 
-footer .container {
+footer .container .content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-footer .container ul {
-  margin: auto;
+footer .container .content ul {
+  margin: 0 auto;
+}
+
+footer .container .content ul li a {
+  display: flex;
+  align-items: center;
+}
+
+footer .container .content ul.authors li > a > box-icon {
+  padding: 0 5px 0 0;
+}
+
+footer .container .content ul.authors li.heading {
+  font-size: 1.5em;
+  color: var(--clr-a);
+}
+
+footer .container .content ul.authors li.heading:not(:first-of-type) {
+  padding: 1em 0 0 0;
+}
+
+footer .container .cc {
+  padding: 3em 0 3em 0;
+  text-align: center;
+}
+
+footer .container .cc p {
+  color: var(--clr-a);
+  font-size: 1.3em;
 }
