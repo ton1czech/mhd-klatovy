@@ -2,11 +2,19 @@
 :root {
   --clr-nav: #fef7dc;
   --clr-h1: #756c51;
-  --clr-p: #857c66;
+  --clr-p: #c39831;
   --clr-a: #6e6755;
-  --clr-main: #e6ddc6;
+  --clr-main: #e9d6a5;
   --clr-footer: #fef7dc;
   --clr-line: #ccc2ab;
+  --clr-btn: #906d1a;
+  --clr-svg: #6e6755;
+}
+
+.darkmode {
+  --clr-nav: #333;
+  --clr-main: #000;
+  --clr-svg: #ffffff;
 }
 
 * {
@@ -50,6 +58,9 @@ ul {
 
 .btn {
   display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 header {
@@ -75,8 +86,9 @@ header nav ul {
   gap: 1.6em;
 }
 
-header nav ul li {
-  transition: text-decoration 3s;
+header nav ul li button img {
+  color: white;
+  fill: white;
 }
 
 header nav ul li:hover {
@@ -97,9 +109,13 @@ main .box h1 {
 }
 
 main .box p {
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
   text-align: justify;
   padding: 0 1.3em;
+}
+
+main .box p:last-of-type {
+  margin: 0 0 2em 0;
 }
 
 main .box .btn {
@@ -111,14 +127,14 @@ main .box .btn {
 main .box .btn a {
   text-align: center;
   font-size: 1.9em;
-  border: 5px solid red;
+  border: 5px solid var(--clr-btn);
   padding: 0.4em;
   border-radius: 3px;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 main .box .btn a:hover {
-  background: red;
+  background: var(--clr-btn);
   color: black;
 }
 
@@ -130,7 +146,7 @@ footer {
 
 footer .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 footer .container ul {
