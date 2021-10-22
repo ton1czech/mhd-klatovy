@@ -241,6 +241,10 @@ main.about div.team ul:last-of-type {
   padding: 0 0 6em 4em;
 }
 
+main.error h1 {
+  padding: 2.5em 0;
+}
+
 footer {
   padding: 2em 0 0 0;
   background: var(--clr-footer);
