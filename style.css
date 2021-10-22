@@ -91,11 +91,6 @@ header nav ul {
   gap: 1.6em;
 }
 
-header nav ul li button img {
-  color: white;
-  fill: white;
-}
-
 header nav ul li:hover {
   text-decoration: underline;
 }
@@ -104,23 +99,23 @@ main {
   background: var(--clr-main);
 }
 
-main .box {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(./assets/mhd.jpg) center center/cover;
-}
-
-main .box h1 {
+main h1 {
   padding: 0.4em 0 0.6em 0;
   text-align: center;
 }
 
-main .box p {
+main p {
   margin: 0 0 1em 0;
   text-align: justify;
   padding: 0 1.3em;
 }
 
-main .box p:last-of-type {
+main p:last-of-type {
   margin: 0 0 2em 0;
+}
+
+main .box {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(./assets/mhd.jpg) center center/cover;
 }
 
 main .box .btn {
@@ -143,10 +138,64 @@ main .box .btn a:hover {
   color: black;
 }
 
+main .sponsors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4em;
+  padding: 5em 0 5em 0;
+  align-items: flex-end;
+}
+
+main .sponsors div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .sponsors img {
+  width: 75%;
+}
+
+main.about h1 {
+  text-align: center;
+}
+
+main.about h2 {
+  font-size: 2.5em;
+}
+
+main.about h2:first-of-type {
+  padding: 0 0 0.5em 0;
+}
+
+main.about p {
+  padding: 0 0 1em 1.2em;
+}
+
+main.about ul {
+  padding: 0 0 1.9em 1.9em;
+}
+
+main.about ul li {
+  display: flex;
+  align-items: center;
+}
+
+main.about ul li img {
+  width: 3em;
+  padding: 0 0.7em 0 0;
+}
+
 footer {
-  padding: 1em 0 0 0;
+  padding: 2em 0 0 0;
   background: var(--clr-footer);
   border-top: 0.5px solid var(--clr-line);
+}
+
+footer img {
+  width: 1.3em;
+  padding: 0 5px 0 0;
 }
 
 footer .container .content {
@@ -158,13 +207,13 @@ footer .container .content ul {
   margin: 0 auto;
 }
 
+footer .container .content ul h2.title {
+  padding: 0 0 0.3em 0;
+}
+
 footer .container .content ul li a {
   display: flex;
   align-items: center;
-}
-
-footer .container .content ul.authors li > a > box-icon {
-  padding: 0 5px 0 0;
 }
 
 footer .container .content ul.authors li.heading {
