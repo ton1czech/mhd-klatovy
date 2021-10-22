@@ -2,8 +2,8 @@
 
 :root {
   --clr-nav: #fef7dc;
-  --clr-h1: #554e3b;
-  --clr-p: #6e6755;
+  --clr-h1: #756c51;
+  --clr-p: #857c66;
   --clr-a: #6e6755;
   --clr-main: #e6ddc6;
   --clr-footer: #fef7dc;
@@ -17,6 +17,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
 }
 
 .container {
@@ -89,6 +93,52 @@ main {
   background: var(--clr-main);
 
   .box {
-    background: url(./assets/mhd.jpg) center center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(./assets/mhd.jpg) center center / cover;
+
+    h1 {
+      padding: 0.4em 0 0.6em 0;
+      text-align: center;
+    }
+
+    p {
+      margin: 0 0 2em 0;
+      text-align: justify;
+      padding: 0 1.3em;
+    }
+
+    .btn {
+      padding: 0 0 1.3em 0;
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-align: center;
+        font-size: 1.9em;
+        border: 5px solid red; //color
+        padding: 0.4em;
+        border-radius: 3px;
+        transition: background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background: red; //color
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 1em 0 0 0;
+  background: var(--clr-footer);
+  border-top: 0.5px solid var(--clr-line);
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    ul {
+      margin: auto;
+    }
   }
 }
