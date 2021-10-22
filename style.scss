@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+:root {
+  --clr-nav: #fef7dc;
+  --clr-h1: #554e3b;
+  --clr-p: #6e6755;
+  --clr-a: #6e6755;
+  --clr-main: #e6ddc6;
+  --clr-footer: #fef7dc;
+  --clr-line: #ccc2ab;
+}
+
+.dark-mode {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-a);
+  font-size: 1.3em;
+}
+
+h1 {
+  color: var(--clr-h1);
+  font-size: 6em;
+}
+
+p {
+  font-size: 1.6em;
+  color: var(--clr-p);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn {
+  display: inline-block;
+}
+
+header {
+  background: var(--clr-nav);
+  border-bottom: 0.5px solid var(--clr-line);
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6.3rem;
+
+    .logo {
+      a {
+        font-family: 'Zen Tokyo Zoo', cursive;
+        font-size: 3.5em;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1.6em;
+
+      li {
+        transition: text-decoration 3s; //transition//
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+main {
+  background: var(--clr-main);
+
+  .box {
+    background: url(./assets/mhd.jpg) center center / cover;
+  }
+}
