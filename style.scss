@@ -388,6 +388,10 @@ footer {
     width: 100%;
   }
 
+  .space {
+    padding-bottom: 2rem;
+  }
+
   header {
     padding: 0 13px;
 
@@ -415,22 +419,25 @@ footer {
   main {
     h1 {
       font-size: 2.3em;
-      text-align: left;
+      text-align: center;
       padding: 0.8em 13px 0 13px;
     }
 
     p {
       font-size: 1em;
-      padding: 0 13px;
     }
 
     .box {
+      p {
+        padding: 0 13px;
+      }
+
       .btn {
-        padding: 0 0 2em 0;
+        padding: 1em 0 1.7em 0;
 
         a {
           border: 2px solid var(--clr-box-btn);
-          font-size: 1.1em;
+          font-size: 1em;
         }
       }
     }
@@ -451,33 +458,47 @@ footer {
   }
 
   main.about {
-    h2 {
-      font-size: 1.3em;
-      padding: 0 13px;
-    }
+    .container {
+      width: 95%;
 
-    p {
-      font-size: 1em;
-      padding: 0 13px 20px 13px;
-      margin: 0;
-    }
-
-    ul.technologies {
-      padding: 0 13px 20px 13px;
-
-      li:not(:last-of-type) {
-        padding: 0 0 0.5em 0;
-      }
-    }
-
-    div.team {
-      h3 {
-        font-size: 1.1em;
+      h2 {
+        font-size: 1.3em;
       }
 
-      ul {
+      p {
+        font-size: 1em;
+      }
+
+      ul.technologies {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+
         li {
+          width: auto;
           font-size: 0.9em;
+
+          &:not(:last-of-type) {
+            padding: 0 0 0.5em 0;
+          }
+        }
+      }
+
+      ul.team {
+        width: 100%;
+        gap: 1em;
+
+        h3 {
+          font-size: 1.1em;
+        }
+
+        ul {
+          padding: 0.4em;
+          width: 100%;
+
+          li {
+            font-size: 0.9em;
+          }
         }
       }
     }
@@ -485,10 +506,10 @@ footer {
 
   footer {
     .container {
+      width: 95%;
       .content {
         display: grid;
         grid-template-columns: 1fr;
-        padding: 0 13px;
 
         ul {
           margin: 0;

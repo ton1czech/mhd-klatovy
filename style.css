@@ -370,6 +370,9 @@ footer .cc p {
   .container {
     width: 100%;
   }
+  .space {
+    padding-bottom: 2rem;
+  }
   header {
     padding: 0 13px;
   }
@@ -390,19 +393,21 @@ footer .cc p {
   }
   main h1 {
     font-size: 2.3em;
-    text-align: left;
+    text-align: center;
     padding: 0.8em 13px 0 13px;
   }
   main p {
     font-size: 1em;
+  }
+  main .box p {
     padding: 0 13px;
   }
   main .box .btn {
-    padding: 0 0 2em 0;
+    padding: 1em 0 1.7em 0;
   }
   main .box .btn a {
     border: 2px solid var(--clr-box-btn);
-    font-size: 1.1em;
+    font-size: 1em;
   }
   main .sponsors {
     grid-template-columns: 1fr;
@@ -415,31 +420,47 @@ footer .cc p {
   main .sponsors img {
     width: 50%;
   }
-  main.about h2 {
+  main.about .container {
+    width: 95%;
+  }
+  main.about .container h2 {
     font-size: 1.3em;
-    padding: 0 13px;
   }
-  main.about p {
+  main.about .container p {
     font-size: 1em;
-    padding: 0 13px 20px 13px;
-    margin: 0;
   }
-  main.about ul.technologies {
-    padding: 0 13px 20px 13px;
+  main.about .container ul.technologies {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
   }
-  main.about ul.technologies li:not(:last-of-type) {
+  main.about .container ul.technologies li {
+    width: auto;
+    font-size: 0.9em;
+  }
+  main.about .container ul.technologies li:not(:last-of-type) {
     padding: 0 0 0.5em 0;
   }
-  main.about div.team h3 {
+  main.about .container ul.team {
+    width: 100%;
+    gap: 1em;
+  }
+  main.about .container ul.team h3 {
     font-size: 1.1em;
   }
-  main.about div.team ul li {
+  main.about .container ul.team ul {
+    padding: 0.4em;
+    width: 100%;
+  }
+  main.about .container ul.team ul li {
     font-size: 0.9em;
+  }
+  footer .container {
+    width: 95%;
   }
   footer .container .content {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 13px;
   }
   footer .container .content ul {
     margin: 0;
