@@ -42,7 +42,9 @@ line {
   transition: background 0.6s linear, color 0.6s linear;
 }
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -129,8 +131,22 @@ header nav ul {
   gap: 1.6em;
 }
 
-header nav ul li:hover {
-  text-decoration: underline;
+header nav ul li:not(:last-of-type) {
+  position: relative;
+}
+
+header nav ul li:not(:last-of-type)::after {
+  content: '';
+  width: 0;
+  border-bottom: 3px solid var(--clr-line);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+header nav ul li:not(:last-of-type):hover::after {
+  width: 100%;
 }
 
 main {
@@ -238,7 +254,7 @@ main.about ul li img {
 }
 
 main.about ul.technologies li:not(:last-of-type) {
-  padding: 0 0 2em 0;
+  padding: 0 0 1em 0;
 }
 
 main.about div.team h3 {
