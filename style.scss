@@ -14,10 +14,10 @@
   --clr-sponsors: #dfca99;
   --clr-footer: #e9dfb6;
   --clr-line: #ccc2ab;
-
-  --clr-box-btn: #fa7d09;
-  --clr-box-h1: #cc721e;
-  --clr-box-p: #dd8a3b;
+  --clr-box-image: #b89e67ce;
+  --clr-box-btn: #7f00b1;
+  --clr-box-h1: #6a0094;
+  --clr-box-p: #550077;
 }
 
 .darkmode {
@@ -31,6 +31,10 @@
   --clr-sponsors: #463c3c;
   --clr-footer: #443737;
   --clr-line: #807b6d;
+  --clr-box-image: #1d1818de;
+  --clr-box-btn: #fa7d09;
+  --clr-box-h1: #cc721e;
+  --clr-box-p: #dd8a3b;
 }
 
 header,
@@ -106,7 +110,6 @@ li {
   display: inline-block;
   background: none;
   border: none;
-  cursor: pointer;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -131,6 +134,10 @@ header {
       display: flex;
       align-items: center;
       gap: 1.6em;
+
+      li > button {
+        cursor: pointer;
+      }
 
       li:not(:last-of-type) {
         position: relative;
@@ -175,7 +182,7 @@ main {
   }
 
   .box {
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(./assets/mhd.jpg) center center / cover;
+    background: linear-gradient(var(--clr-box-image), var(--clr-box-image)), url(./assets/mhd.jpg) center center / cover;
 
     h1 {
       color: var(--clr-box-h1);
