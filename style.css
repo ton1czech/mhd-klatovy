@@ -342,13 +342,13 @@ footer .container .cc p {
   header nav ul {
     gap: 0.7em;
   }
-  main .box h1 {
+  main h1 {
     font-size: 2.3em;
     text-align: left;
     padding: 0.8em 13px 0 13px;
   }
-  main .box p {
-    font-size: 1.4em;
+  main p {
+    font-size: 1em;
     padding: 0 13px;
   }
   main .box .btn {
@@ -356,7 +356,7 @@ footer .container .cc p {
   }
   main .box .btn a {
     border: 2px solid var(--clr-box-btn);
-    font-size: 1em;
+    font-size: 1.1em;
   }
   main .sponsors {
     grid-template-columns: 1fr;
@@ -368,6 +368,23 @@ footer .container .cc p {
   }
   main .sponsors img {
     width: 50%;
+  }
+  main.about h2 {
+    font-size: 1.3em;
+    padding: 0 13px;
+  }
+  main.about p {
+    font-size: 1em;
+    padding: 0 13px 0 18px;
+  }
+  main.about ul.technologies li:not(:last-of-type) {
+    padding: 0 0 0.5em 0;
+  }
+  main.about div.team h3 {
+    font-size: 1.1em;
+  }
+  main.about div.team ul li {
+    font-size: 0.9em;
   }
   footer .container .content {
     display: grid;

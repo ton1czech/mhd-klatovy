@@ -371,23 +371,23 @@ footer {
   }
 
   main {
+    h1 {
+      font-size: 2.3em;
+      text-align: left;
+      padding: 0.8em 13px 0 13px;
+    }
+
+    p {
+      font-size: 1em;
+      padding: 0 13px;
+    }
+
     .box {
-      h1 {
-        font-size: 2.3em;
-        text-align: left;
-        padding: 0.8em 13px 0 13px;
-      }
-
-      p {
-        font-size: 1.4em;
-        padding: 0 13px;
-      }
-
       .btn {
         padding: 0 0 2em 0;
         a {
           border: 2px solid var(--clr-box-btn);
-          font-size: 1em;
+          font-size: 1.1em;
         }
       }
     }
@@ -403,6 +403,36 @@ footer {
 
       img {
         width: 50%;
+      }
+    }
+
+    &.about {
+      h2 {
+        font-size: 1.3em;
+        padding: 0 13px;
+      }
+
+      p {
+        font-size: 1em;
+        padding: 0 13px 0 18px;
+      }
+
+      ul.technologies {
+        li:not(:last-of-type) {
+          padding: 0 0 0.5em 0;
+        }
+      }
+
+      div.team {
+        h3 {
+          font-size: 1.1em;
+        }
+
+        ul {
+          li {
+            font-size: 0.9em;
+          }
+        }
       }
     }
   }
