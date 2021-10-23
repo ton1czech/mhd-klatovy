@@ -388,11 +388,11 @@ footer .container .cc p {
   }
   main .sponsors {
     grid-template-columns: 1fr;
-    gap: 3em;
+    gap: 2.5em;
     padding: 0;
   }
   main .sponsors div {
-    height: 350px;
+    height: 380px;
   }
   main .sponsors img {
     width: 50%;
@@ -403,7 +403,11 @@ footer .container .cc p {
   }
   main.about p {
     font-size: 1em;
-    padding: 0 13px 0 18px;
+    padding: 0 13px 20px 13px;
+    margin: 0;
+  }
+  main.about ul.technologies {
+    padding: 0 13px 20px 13px;
   }
   main.about ul.technologies li:not(:last-of-type) {
     padding: 0 0 0.5em 0;
