@@ -10,7 +10,7 @@
   --clr-p: #5a4617;
   --clr-a: #6e6755;
   --clr-main: #e9d6a9;
-  --clr-sponsors: #dfca99;
+  --clr-background-box: #dfca99;
   --clr-footer: #e9dfb6;
   --clr-line: #ccc2ab;
   --clr-box-image: #b89e67ce;
@@ -27,7 +27,7 @@
   --clr-p: #c2cac1;
   --clr-a: #e6ddc6;
   --clr-main: #272121;
-  --clr-sponsors: #463c3c;
+  --clr-background-box: #463c3c;
   --clr-footer: #443737;
   --clr-line: #807b6d;
   --clr-box-image: #1d1818de;
@@ -88,6 +88,8 @@ h2 {
 
 h3 {
   font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+  color: var(--clr-h3);
 }
 
 p {
@@ -162,15 +164,12 @@ main {
 }
 
 main h1 {
-  padding: 0.4em 0 0.6em 0;
   text-align: center;
   text-transform: uppercase;
 }
 
 main p {
-  margin: 0 0 1em 0;
   text-align: justify;
-  padding: 0 1.3em;
 }
 
 main p:last-of-type {
@@ -183,9 +182,12 @@ main .box {
 
 main .box h1 {
   color: var(--clr-box-h1);
+  padding: 0.4em 0 0.6em 0;
 }
 
 main .box p {
+  padding: 0 1.3em;
+  margin: 0 0 1em 0;
   color: var(--clr-box-p);
 }
 
@@ -226,16 +228,12 @@ main .sponsors div {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background: var(--clr-sponsors);
+  background: var(--clr-background-box);
 }
 
 main .sponsors img {
   width: 75%;
   padding: 0 0 3em 0;
-}
-
-main.about h1 {
-  text-align: center;
 }
 
 main.about h2 {
@@ -244,11 +242,11 @@ main.about h2 {
 }
 
 main.about p {
-  padding: 0 0 1em 1.2em;
+  margin: 0 0 2rem 0;
 }
 
 main.about ul {
-  padding: 0 0 2.9em 1.9em;
+  padding: 0 0 2rem 0;
 }
 
 main.about ul li {
@@ -261,26 +259,37 @@ main.about ul li img {
   padding: 0 0.7em 0 0;
 }
 
-main.about ul.technologies li:not(:last-of-type) {
-  padding: 0 0 1em 0;
+main.about ul.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
 }
 
-main.about div.team h3 {
-  padding: 0 0 0 1.7em;
-  font-size: 1.5em;
-  color: var(--clr-h3);
+main.about ul.technologies li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10em;
+  height: 10em;
+  padding: 1em;
+  background: var(--clr-background-box);
+  font-size: 1.1em;
 }
 
-main.about div.team ul {
-  padding: 0 0 1.5em 4em;
+main.about ul.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
 }
 
-main.about div.team ul li {
-  font-size: 1.2em;
+main.about ul.team ul {
+  background: var(--clr-background-box);
+  padding: 1em;
+  width: 20em;
 }
 
-main.about div.team ul:last-of-type {
-  padding: 0 0 6em 4em;
+main.about ul.team ul h3 {
+  padding: 0 0 0.3em 0;
 }
 
 main.error h1 {
@@ -306,44 +315,44 @@ footer img {
   padding: 0 5px 0 0;
 }
 
-footer .container .content {
+footer .content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-footer .container .content ul {
+footer .content ul {
   margin: 0 auto;
 }
 
-footer .container .content ul h2.title {
+footer .content ul h2.title {
   padding: 0 0 0.3em 0;
 }
 
-footer .container .content ul li a {
+footer .content ul li a {
   display: flex;
   align-items: center;
 }
 
-footer .container .content ul.authors li.heading {
+footer .content ul.authors li.heading {
   font-size: 1.5em;
   color: var(--clr-a);
   font-weight: 600;
 }
 
-footer .container .content ul.authors li.heading a {
+footer .content ul.authors li.heading a {
   font-size: 2em;
 }
 
-footer .container .content ul.authors li.heading:not(:first-of-type) {
+footer .content ul.authors li.heading:not(:first-of-type) {
   padding: 1em 0 0 0;
 }
 
-footer .container .cc {
+footer .cc {
   padding: 3em 0 3em 0;
   text-align: center;
 }
 
-footer .container .cc p {
+footer .cc p {
   color: var(--clr-a);
   font-size: 1.3em;
 }
