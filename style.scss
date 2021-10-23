@@ -11,6 +11,7 @@
   --clr-p: #5a4617;
   --clr-a: #6e6755;
   --clr-main: #e9d6a9;
+  --clr-sponsors: #dfca99;
   --clr-footer: #e9dfb6;
   --clr-line: #ccc2ab;
 
@@ -27,6 +28,7 @@
   --clr-p: #c2cac1;
   --clr-a: #e6ddc6;
   --clr-main: #272121;
+  --clr-sponsors: #463c3c;
   --clr-footer: #443737;
   --clr-line: #807b6d;
 }
@@ -145,6 +147,7 @@ main {
   h1 {
     padding: 0.4em 0 0.6em 0;
     text-align: center;
+    text-transform: uppercase;
   }
 
   p {
@@ -172,6 +175,7 @@ main {
       padding: 1em 0 3.3em 0;
       display: flex;
       justify-content: center;
+      text-transform: uppercase;
 
       a {
         text-align: center;
@@ -203,10 +207,13 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 100%;
+      background: var(--clr-sponsors);
     }
 
     img {
       width: 75%;
+      padding: 0 0 3em 0;
     }
   }
 }
@@ -329,6 +336,96 @@ footer {
       p {
         color: var(--clr-a);
         font-size: 1.3em;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  header {
+    padding: 0 13px;
+
+    nav {
+      height: 3.3em;
+
+      .logo {
+        font-size: 0.45em;
+      }
+
+      a {
+        font-size: 0.8em;
+      }
+
+      button img {
+        width: 1.3em;
+      }
+
+      ul {
+        gap: 0.7em;
+      }
+    }
+  }
+
+  main {
+    .box {
+      h1 {
+        font-size: 2.3em;
+        text-align: left;
+        padding: 0.8em 13px 0 13px;
+      }
+
+      p {
+        font-size: 1.4em;
+        padding: 0 13px;
+      }
+
+      .btn {
+        padding: 0 0 2em 0;
+        a {
+          border: 2px solid var(--clr-box-btn);
+          font-size: 1em;
+        }
+      }
+    }
+
+    .sponsors {
+      grid-template-columns: 1fr;
+      gap: 3em;
+      padding: 0;
+
+      div {
+        height: 350px;
+      }
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  footer {
+    .container {
+      .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 13px;
+
+        ul {
+          margin: 0;
+          &:not(:last-of-type) {
+            margin: 0 0 2em 0;
+          }
+        }
+      }
+
+      .cc {
+        p {
+          font-size: 1em;
+        }
       }
     }
   }

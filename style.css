@@ -10,6 +10,7 @@
   --clr-p: #5a4617;
   --clr-a: #6e6755;
   --clr-main: #e9d6a9;
+  --clr-sponsors: #dfca99;
   --clr-footer: #e9dfb6;
   --clr-line: #ccc2ab;
   --clr-box-btn: #fa7d09;
@@ -25,6 +26,7 @@
   --clr-p: #c2cac1;
   --clr-a: #e6ddc6;
   --clr-main: #272121;
+  --clr-sponsors: #463c3c;
   --clr-footer: #443737;
   --clr-line: #807b6d;
 }
@@ -138,6 +140,7 @@ main {
 main h1 {
   padding: 0.4em 0 0.6em 0;
   text-align: center;
+  text-transform: uppercase;
 }
 
 main p {
@@ -166,6 +169,7 @@ main .box .btn {
   padding: 1em 0 3.3em 0;
   display: flex;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 main .box .btn a {
@@ -197,10 +201,13 @@ main .sponsors div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  background: var(--clr-sponsors);
 }
 
 main .sponsors img {
   width: 75%;
+  padding: 0 0 3em 0;
 }
 
 main.about h1 {
@@ -311,4 +318,69 @@ footer .container .cc {
 footer .container .cc p {
   color: var(--clr-a);
   font-size: 1.3em;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  header {
+    padding: 0 13px;
+  }
+  header nav {
+    height: 3.3em;
+  }
+  header nav .logo {
+    font-size: 0.45em;
+  }
+  header nav a {
+    font-size: 0.8em;
+  }
+  header nav button img {
+    width: 1.3em;
+  }
+  header nav ul {
+    gap: 0.7em;
+  }
+  main .box h1 {
+    font-size: 2.3em;
+    text-align: left;
+    padding: 0.8em 13px 0 13px;
+  }
+  main .box p {
+    font-size: 1.4em;
+    padding: 0 13px;
+  }
+  main .box .btn {
+    padding: 0 0 2em 0;
+  }
+  main .box .btn a {
+    border: 2px solid var(--clr-box-btn);
+    font-size: 1em;
+  }
+  main .sponsors {
+    grid-template-columns: 1fr;
+    gap: 3em;
+    padding: 0;
+  }
+  main .sponsors div {
+    height: 350px;
+  }
+  main .sponsors img {
+    width: 50%;
+  }
+  footer .container .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 13px;
+  }
+  footer .container .content ul {
+    margin: 0;
+  }
+  footer .container .content ul:not(:last-of-type) {
+    margin: 0 0 2em 0;
+  }
+  footer .container .cc p {
+    font-size: 1em;
+  }
 }
