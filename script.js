@@ -4,8 +4,14 @@ const cityIcon = document.getElementById('city-icon')
 const githubIcon = document.getElementById('github-icon')
 const boxiconsIcon = document.getElementById('boxicons-icon')
 const instagramIcon = document.getElementsByClassName('instagram-icon')
-
-console.log(instagramIcon)
+const htmlIcon = document.getElementById('html-icon')
+const cssIcon = document.getElementById('css-icon')
+const sassIcon = document.getElementById('sass-icon')
+const jsIcon = document.getElementById('js-icon')
+const dataIcon = document.getElementById('data-icon')
+const vsIcon = document.getElementById('vs-icon')
+const powerbiIcon = document.getElementById('powerbi-icon')
+const iconscoutIcon = document.getElementById('iconscout-icon')
 
 button.addEventListener('click', () => {
   document.body.classList.toggle('darkmode')
@@ -38,4 +44,36 @@ button.addEventListener('click', () => {
   instagramIcon[3].src.match('./assets/instagram-light.svg')
     ? (instagramIcon[3].src = './assets/instagram-dark.svg')
     : (instagramIcon[3].src = './assets/instagram-light.svg')
+
+  htmlIcon.src.match('./assets/html-light.svg')
+    ? (htmlIcon.src = './assets/html-dark.svg')
+    : (htmlIcon.src = './assets/html-light.svg')
+
+  cssIcon.src.match('./assets/css-light.svg')
+    ? (cssIcon.src = './assets/css-dark.svg')
+    : (cssIcon.src = './assets/css-light.svg')
+
+  sassIcon.src.match('./assets/sass-light.svg')
+    ? (sassIcon.src = './assets/sass-dark.svg')
+    : (sassIcon.src = './assets/sass-light.svg')
+
+  jsIcon.src.match('./assets/js-light.svg')
+    ? (jsIcon.src = './assets/js-dark.svg')
+    : (jsIcon.src = './assets/js-light.svg')
+
+  dataIcon.src.match('./assets/data-light.svg')
+    ? (dataIcon.src = './assets/data-dark.svg')
+    : (dataIcon.src = './assets/data-light.svg')
+
+  vsIcon.src.match('./assets/vs-light.svg')
+    ? (vsIcon.src = './assets/vs-dark.svg')
+    : (vsIcon.src = './assets/vs-light.svg')
+
+  powerbiIcon.src.match('./assets/powerbi-light.svg')
+    ? (powerbiIcon.src = './assets/powerbi-dark.svg')
+    : (powerbiIcon.src = './assets/powerbi-light.svg')
+
+  iconscoutIcon.src.match('./assets/iconscout-light.svg')
+    ? (iconscoutIcon.src = './assets/iconscout-dark.svg')
+    : (iconscoutIcon.src = './assets/iconscout-light.svg')
 })
