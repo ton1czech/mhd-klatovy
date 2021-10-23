@@ -12,11 +12,12 @@
   --clr-main: #e9d6a9;
   --clr-background-box: #dfca99;
   --clr-footer: #e9dfb6;
+  --clr-footer-hover: #c9be93;
   --clr-line: #ccc2ab;
   --clr-box-image: #b89e67ce;
-  --clr-box-btn: #7f00b1;
-  --clr-box-h1: #6a0094;
-  --clr-box-p: #550077;
+  --clr-box-btn: #670090;
+  --clr-box-h1: #550077;
+  --clr-box-p: #500070;
 }
 
 .darkmode {
@@ -29,6 +30,8 @@
   --clr-main: #272121;
   --clr-background-box: #463c3c;
   --clr-footer: #443737;
+  --clr-footer-hover: #312929;
+  --clr-line: #807b6d;
   --clr-line: #807b6d;
   --clr-box-image: #1d1818de;
   --clr-box-btn: #fa7d09;
@@ -330,6 +333,13 @@ footer .content ul h2.title {
 footer .content ul li a {
   display: flex;
   align-items: center;
+  transition: background 0.3s linear;
+  padding: 0.15em;
+}
+
+footer .content ul li a:hover {
+  background: var(--clr-footer-hover);
+  border-radius: 5px;
 }
 
 footer .content ul.authors li.heading {

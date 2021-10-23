@@ -12,14 +12,18 @@ const dataIcon = document.getElementById('data-icon')
 const vsIcon = document.getElementById('vs-icon')
 const powerbiIcon = document.getElementById('powerbi-icon')
 const iconscoutIcon = document.getElementById('iconscout-icon')
+const mapIcon = document.getElementById('map-icon')
+const spreadsheetIcon = document.getElementById('spreadsheet-icon')
 
 button.addEventListener('click', () => {
   document.body.classList.toggle('darkmode')
 
+  // header
   darkModeIcon.src.match('./assets/moon.svg')
     ? (darkModeIcon.src = './assets/sun.svg')
     : (darkModeIcon.src = './assets/moon.svg')
 
+  // footer
   cityIcon.src.match('./assets/city-light.svg')
     ? (cityIcon.src = './assets/city-dark.svg')
     : (cityIcon.src = './assets/city-light.svg')
@@ -45,6 +49,19 @@ button.addEventListener('click', () => {
     ? (instagramIcon[3].src = './assets/instagram-dark.svg')
     : (instagramIcon[3].src = './assets/instagram-light.svg')
 
+  iconscoutIcon.src.match('./assets/iconscout-light.svg')
+    ? (iconscoutIcon.src = './assets/iconscout-dark.svg')
+    : (iconscoutIcon.src = './assets/iconscout-light.svg')
+
+  mapIcon.src.match('./assets/map-light.svg')
+    ? (mapIcon.src = './assets/map-dark.svg')
+    : (mapIcon.src = './assets/map-light.svg')
+
+  spreadsheetIcon.src.match('./assets/spreadsheet-light.svg')
+    ? (spreadsheetIcon.src = './assets/spreadsheet-dark.svg')
+    : (spreadsheetIcon.src = './assets/spreadsheet-light.svg')
+
+  // about page
   htmlIcon.src.match('./assets/html-light.svg')
     ? (htmlIcon.src = './assets/html-dark.svg')
     : (htmlIcon.src = './assets/html-light.svg')
@@ -72,8 +89,4 @@ button.addEventListener('click', () => {
   powerbiIcon.src.match('./assets/powerbi-light.svg')
     ? (powerbiIcon.src = './assets/powerbi-dark.svg')
     : (powerbiIcon.src = './assets/powerbi-light.svg')
-
-  iconscoutIcon.src.match('./assets/iconscout-light.svg')
-    ? (iconscoutIcon.src = './assets/iconscout-dark.svg')
-    : (iconscoutIcon.src = './assets/iconscout-light.svg')
 })
