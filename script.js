@@ -1,5 +1,5 @@
-const button = document.querySelector('#darkmode')
-const darkModeIcon = document.querySelector('#darkmode-icon')
+const button = document.getElementById('darkmode')
+const darkModeIcon = document.getElementById('darkmode-icon')
 const cityIcon = document.getElementById('city-icon')
 const githubIcon = document.getElementById('github-icon')
 const boxiconsIcon = document.getElementById('boxicons-icon')
@@ -14,8 +14,11 @@ const powerbiIcon = document.getElementById('powerbi-icon')
 const iconscoutIcon = document.getElementById('iconscout-icon')
 const mapIcon = document.getElementById('map-icon')
 const spreadsheetIcon = document.getElementById('spreadsheet-icon')
+const homeLink = document.getElementById('home-link')
+const aboutLink = document.getElementById('about-link')
+const mapLink = document.getElementById('map-link')
 
-button.addEventListener('click', () => {
+setDarkMode = () => {
   document.body.classList.toggle('darkmode')
 
   // header
@@ -62,31 +65,44 @@ button.addEventListener('click', () => {
     : (spreadsheetIcon.src = './assets/spreadsheet-light.svg')
 
   // about page
-  htmlIcon.src.match('./assets/html-light.svg')
-    ? (htmlIcon.src = './assets/html-dark.svg')
-    : (htmlIcon.src = './assets/html-light.svg')
+  try {
+    htmlIcon.src.match('./assets/html-light.svg')
+      ? (htmlIcon.src = './assets/html-dark.svg')
+      : (htmlIcon.src = './assets/html-light.svg')
 
-  cssIcon.src.match('./assets/css-light.svg')
-    ? (cssIcon.src = './assets/css-dark.svg')
-    : (cssIcon.src = './assets/css-light.svg')
+    cssIcon.src.match('./assets/css-light.svg')
+      ? (cssIcon.src = './assets/css-dark.svg')
+      : (cssIcon.src = './assets/css-light.svg')
 
-  sassIcon.src.match('./assets/sass-light.svg')
-    ? (sassIcon.src = './assets/sass-dark.svg')
-    : (sassIcon.src = './assets/sass-light.svg')
+    sassIcon.src.match('./assets/sass-light.svg')
+      ? (sassIcon.src = './assets/sass-dark.svg')
+      : (sassIcon.src = './assets/sass-light.svg')
 
-  jsIcon.src.match('./assets/js-light.svg')
-    ? (jsIcon.src = './assets/js-dark.svg')
-    : (jsIcon.src = './assets/js-light.svg')
+    jsIcon.src.match('./assets/js-light.svg')
+      ? (jsIcon.src = './assets/js-dark.svg')
+      : (jsIcon.src = './assets/js-light.svg')
 
-  dataIcon.src.match('./assets/data-light.svg')
-    ? (dataIcon.src = './assets/data-dark.svg')
-    : (dataIcon.src = './assets/data-light.svg')
+    dataIcon.src.match('./assets/data-light.svg')
+      ? (dataIcon.src = './assets/data-dark.svg')
+      : (dataIcon.src = './assets/data-light.svg')
 
-  vsIcon.src.match('./assets/vs-light.svg')
-    ? (vsIcon.src = './assets/vs-dark.svg')
-    : (vsIcon.src = './assets/vs-light.svg')
+    vsIcon.src.match('./assets/vs-light.svg')
+      ? (vsIcon.src = './assets/vs-dark.svg')
+      : (vsIcon.src = './assets/vs-light.svg')
 
-  powerbiIcon.src.match('./assets/powerbi-light.svg')
-    ? (powerbiIcon.src = './assets/powerbi-dark.svg')
-    : (powerbiIcon.src = './assets/powerbi-light.svg')
+    powerbiIcon.src.match('./assets/powerbi-light.svg')
+      ? (powerbiIcon.src = './assets/powerbi-dark.svg')
+      : (powerbiIcon.src = './assets/powerbi-light.svg')
+  } catch (error) {}
+}
+
+button.addEventListener('click', () => {
+  setDarkMode()
+  return (isDarkmode = true)
 })
+
+themePreference = () => {
+  window.matchMedia('(prefers-color-theme: dark)').matches ? setDarkMode() : null
+}
+
+document.onload = themePreference()
