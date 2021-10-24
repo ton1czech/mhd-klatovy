@@ -98,7 +98,6 @@ setDarkMode = () => {
 
 button.addEventListener('click', () => {
   setDarkMode()
-  return (isDarkmode = true)
 })
 
 themePreference = () => {
