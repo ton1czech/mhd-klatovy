@@ -384,6 +384,30 @@ footer {
 }
 
 @media (max-width: 600px) {
+  a {
+    font-size: 0.8em;
+  }
+
+  h1 {
+    font-size: 2.3em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  li {
+    font-size: 0.9em;
+  }
+
   .container {
     width: 100%;
   }
@@ -402,10 +426,6 @@ footer {
         font-size: 0.45em;
       }
 
-      a {
-        font-size: 0.8em;
-      }
-
       button img {
         width: 1.3em;
       }
@@ -418,13 +438,7 @@ footer {
 
   main {
     h1 {
-      font-size: 2.3em;
-      text-align: center;
       padding: 0.8em 13px 0 13px;
-    }
-
-    p {
-      font-size: 1em;
     }
 
     .box {
@@ -465,10 +479,6 @@ footer {
         font-size: 1.3em;
       }
 
-      p {
-        font-size: 1em;
-      }
-
       ul.technologies {
         display: grid;
         gap: 1em;
@@ -488,10 +498,6 @@ footer {
         width: 100%;
         gap: 1em;
 
-        h3 {
-          font-size: 1.1em;
-        }
-
         ul {
           padding: 0.4em;
           width: 100%;
@@ -505,14 +511,24 @@ footer {
   }
 
   footer {
+    padding-top: 2.3em;
+
     .container {
       width: 95%;
+
       .content {
         display: grid;
         grid-template-columns: 1fr;
 
         ul {
           margin: 0;
+
+          &.authors {
+            li.heading {
+              font-size: 1em;
+            }
+          }
+
           &:not(:last-of-type) {
             margin: 0 0 2em 0;
           }
@@ -521,7 +537,7 @@ footer {
 
       .cc {
         p {
-          font-size: 1em;
+          font-size: 0.85em;
         }
       }
     }
